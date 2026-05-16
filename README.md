@@ -1,6 +1,6 @@
-# cast0 for OpenClaw
+# cast0: Turn Text into a Published Podcast
 
-Give your AI a voice. This plugin lets OpenClaw agents create podcast episodes via [cast0](https://cast0.ai) — one tool call, text in, episode in your feed.
+Give your AI a voice. This plugin lets OpenClaw agents create podcast episodes via [cast0](https://cast0.ai). One tool call: text in, episode in your feed.
 
 Your AI writes a briefing. You listen to it on your commute. No reading required.
 
@@ -25,7 +25,7 @@ openclaw gateway restart
 
 ### `create_episode`
 
-Creates a podcast episode from text. The text is read verbatim by TTS — your AI writes the script, cast0 reads it. Returns immediately with a queued episode id.
+Creates a podcast episode from text. The text is read verbatim by TTS: your AI writes the script, cast0 reads it. Returns immediately with a queued episode id.
 
 | Parameter | Type | Description |
 |---|---|---|

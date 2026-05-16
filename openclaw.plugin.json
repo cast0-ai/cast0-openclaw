@@ -1,7 +1,7 @@
 {
   "id": "cast0",
-  "name": "cast0",
-  "description": "Turn agent output into podcast episodes. Text in, episode in your feed.",
+  "name": "cast0: Turn Text into a Published Podcast",
+  "description": "Text to podcast for AI agents. Publish episodes to Apple Podcasts, Spotify, Overcast, and any RSS podcast app. TTS (text-to-podcast) powered by OpenAI.",
   "contracts": {
     "tools": ["create_episode", "get_episode", "list_episodes"]
   },
