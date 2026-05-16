@@ -1,0 +1,27 @@
+{
+  "id": "cast0",
+  "name": "cast0",
+  "description": "Turn agent output into podcast episodes. Text in, episode in your feed.",
+  "contracts": {
+    "tools": ["create_episode", "get_episode", "list_episodes"]
+  },
+  "activation": {
+    "onStartup": true
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["apiKey"],
+    "properties": {
+      "apiKey": {
+        "type": "string",
+        "description": "Your cast0 API key (starts with pk_). Get it from cast0.ai."
+      }
+    }
+  },
+  "toolMetadata": {
+    "create_episode": { "optional": false },
+    "get_episode": { "optional": false },
+    "list_episodes": { "optional": false }
+  }
+}

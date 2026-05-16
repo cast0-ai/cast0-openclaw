@@ -1,0 +1,21 @@
+{
+  "name": "@cast0/openclaw-plugin-cast0",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Give your AI a voice. Create podcast episodes from OpenClaw agents via cast0.",
+  "license": "MIT",
+  "openclaw": {
+    "extensions": ["./index.ts"],
+    "compat": {
+      "pluginApi": ">=2026.3.24-beta.2",
+      "minGatewayVersion": "2026.3.24-beta.2"
+    },
+    "build": {
+      "openclawVersion": "2026.3.24-beta.2"
+    }
+  },
+  "devDependencies": {
+    "@sinclair/typebox": "^0.34.0",
+    "typescript": "^5.0.0"
+  }
+}
