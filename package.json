@@ -1,8 +1,8 @@
 {
   "name": "@cast0/openclaw-plugin-cast0",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "module",
-  "description": "Text to podcast for AI agents. Publish episodes to Apple Podcasts, Spotify, Overcast, and any RSS podcast app. TTS (text-to-podcast) powered by OpenAI.",
+  "description": "Send text, get a podcast episode. cast0 converts it to audio using TTS (text-to-podcast), publishes it to an automatically hosted RSS feed, and delivers it to Apple Podcasts, Spotify, Overcast, or any podcast app. Subscribe once, episodes arrive automatically.",
   "license": "MIT",
   "main": "./dist/index.js",
   "scripts": {
