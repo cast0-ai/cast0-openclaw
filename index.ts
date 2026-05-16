@@ -18,8 +18,9 @@ export default definePluginEntry({
 
     api.registerTool({
       name: "create_episode",
+      label: "Create Episode",
       description:
-        "Create a cast0 podcast episode from text. The text is read verbatim by TTS — not interpreted as a prompt. Returns immediately with a queued episode id. Poll get_episode until status is 'done' to get the audio URL. Episodes auto-publish to the podcast RSS feed.",
+        "Create a cast0 podcast episode from text. The text is read verbatim by TTS, not interpreted as a prompt. Returns immediately with a queued episode id. Poll get_episode until status is 'done' to get the audio URL. Episodes auto-publish to the podcast RSS feed.",
       parameters: Type.Object({
         title: Type.String({ description: "Episode title." }),
         text: Type.String({
@@ -34,17 +35,18 @@ export default definePluginEntry({
         });
         const data = await res.json();
         if (!res.ok) {
-          return {
-            content: [{ type: "text", text: `Error ${res.status}: ${data.error ?? JSON.stringify(data)}` }],
-            isError: true,
-          };
+          throw new Error(`cast0 error ${res.status}: ${data.error ?? JSON.stringify(data)}`);
         }
-        return { content: [{ type: "text", text: JSON.stringify(data) }] };
+        return {
+          content: [{ type: "text" as const, text: JSON.stringify(data) }],
+          details: data,
+        };
       },
     });
 
     api.registerTool({
       name: "get_episode",
+      label: "Get Episode",
       description:
         "Get a cast0 episode by id. Poll until status is 'done' to access the audio URL. Status values: queued, processing, done, failed.",
       parameters: Type.Object({
@@ -56,17 +58,18 @@ export default definePluginEntry({
         });
         const data = await res.json();
         if (!res.ok) {
-          return {
-            content: [{ type: "text", text: `Error ${res.status}: ${data.error ?? JSON.stringify(data)}` }],
-            isError: true,
-          };
+          throw new Error(`cast0 error ${res.status}: ${data.error ?? JSON.stringify(data)}`);
         }
-        return { content: [{ type: "text", text: JSON.stringify(data) }] };
+        return {
+          content: [{ type: "text" as const, text: JSON.stringify(data) }],
+          details: data,
+        };
       },
     });
 
     api.registerTool({
       name: "list_episodes",
+      label: "List Episodes",
       description: "List all cast0 episodes for this podcast, newest first.",
       parameters: Type.Object({}),
       async execute(_id, _params) {
@@ -75,12 +78,12 @@ export default definePluginEntry({
         });
         const data = await res.json();
         if (!res.ok) {
-          return {
-            content: [{ type: "text", text: `Error ${res.status}: ${data.error ?? JSON.stringify(data)}` }],
-            isError: true,
-          };
+          throw new Error(`cast0 error ${res.status}: ${data.error ?? JSON.stringify(data)}`);
         }
-        return { content: [{ type: "text", text: JSON.stringify(data) }] };
+        return {
+          content: [{ type: "text" as const, text: JSON.stringify(data) }],
+          details: data,
+        };
       },
     });
   },
