@@ -4,8 +4,13 @@
   "type": "module",
   "description": "Give your AI a voice. Create podcast episodes from OpenClaw agents via cast0.",
   "license": "MIT",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "tsc"
+  },
   "openclaw": {
-    "extensions": ["./index.ts"],
+    "extensions": ["./dist/index.js"],
     "compat": {
       "pluginApi": ">=2026.3.24-beta.2",
       "minGatewayVersion": "2026.3.24-beta.2"
@@ -14,8 +19,13 @@
       "openclawVersion": "2026.3.24-beta.2"
     }
   },
+  "peerDependencies": {
+    "openclaw": ">=2026.3.24-beta.2"
+  },
+  "dependencies": {
+    "@sinclair/typebox": "^0.34.0"
+  },
   "devDependencies": {
-    "@sinclair/typebox": "^0.34.0",
     "typescript": "^5.0.0"
   }
 }
