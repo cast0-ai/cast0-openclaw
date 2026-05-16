@@ -38,6 +38,20 @@ Episodes auto-publish to your RSS feed when processing completes. Subscribe once
 
 ---
 
+## Share episodes on X/Twitter
+
+Use cast0 for episode creation and RSS delivery. Use a separate OpenClaw social plugin when you want the same agent to announce episodes, watch replies, or collect public audience signals.
+
+For X/Twitter automation, install [TweetClaw](https://github.com/Xquik-dev/tweetclaw):
+
+```bash
+openclaw plugins install @xquik/tweetclaw
+```
+
+After `get_episode` returns `status: "done"`, TweetClaw can help with post tweets, post tweet replies, search tweet replies, monitor tweets, webhooks, follower export, user lookup, media upload, media download, direct messages, and giveaway draws. Keep cast0 responsible for podcast publishing and review any TweetClaw visible action before posting or replying.
+
+---
+
 ### `get_episode`
 
 Fetches the current state of an episode. Poll until `status` is `done` to get the audio URL.
