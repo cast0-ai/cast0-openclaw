@@ -1,6 +1,6 @@
 # cast0: Turn Text into a Published Podcast
 
-Give your AI a voice. This plugin lets OpenClaw agents create podcast episodes via [cast0](https://cast0.ai). One tool call: text in, episode in your feed.
+Give your AI a voice. This plugin lets OpenClaw agents create podcast episodes. One tool call: text in, episode in your feed.
 
 Your AI writes a briefing. You listen to it on your commute. No reading required.
 
@@ -12,7 +12,7 @@ Your AI writes a briefing. You listen to it on your commute. No reading required
 openclaw plugins install clawhub:@cast0/openclaw-plugin-cast0
 ```
 
-Then configure your API key (get one at [cast0.ai](https://cast0.ai)):
+Then configure your API key (get one at [cast0.ai](https://cast0.ai/r/gh-openclaw)):
 
 ```bash
 openclaw plugins config cast0 set apiKey pk_xxxxx
@@ -84,5 +84,5 @@ You pay for the episode. Never for the infrastructure.
 
 ## Links
 
-- [cast0.ai](https://cast0.ai)
+- [cast0.ai](https://cast0.ai/r/gh-openclaw)
 - [API docs](https://cast0.ai/docs)
