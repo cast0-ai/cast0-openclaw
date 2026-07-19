@@ -34,7 +34,23 @@ Creates a podcast episode from text. The text is read verbatim by TTS: your AI w
 
 Response: `{ id, status: "queued" }`
 
-Episodes auto-publish to your RSS feed when processing completes. Subscribe once in Apple Podcasts, Spotify, or any podcast app — episodes appear automatically.
+Episodes auto-publish to your RSS feed when processing completes. Subscribe once in Apple Podcasts, Spotify, or any podcast app - episodes appear automatically.
+
+---
+
+## Share episodes on X/Twitter
+
+Use cast0 for episode creation and RSS delivery. Use a separate OpenClaw social plugin when you want the same agent to announce episodes, watch replies, or collect public audience signals.
+
+For X/Twitter automation, install [TweetClaw](https://github.com/Xquik-dev/tweetclaw):
+
+```bash
+openclaw plugins install clawhub:@xquik/tweetclaw
+```
+
+After `get_episode` returns `status: "done"`, use TweetClaw's `explore` tool for safe catalog discovery. Enable its optional `tweetclaw` tool for live research or account actions. Keep cast0 responsible for podcast publishing, and approve every visible TweetClaw action before posting or replying.
+
+Xquik is an independent third-party service. Not affiliated with X Corp. "Twitter" and "X" are trademarks of X Corp.
 
 ---
 

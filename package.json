@@ -4,6 +4,14 @@
   "type": "module",
   "description": "Send text, get a podcast episode. cast0 converts it to audio using TTS (text-to-podcast), publishes it to an automatically hosted RSS feed, and delivers it to Apple Podcasts, Spotify, Overcast, or any podcast app. Subscribe once, episodes arrive automatically.",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cast0-ai/cast0-openclaw.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cast0-ai/cast0-openclaw/issues"
+  },
+  "homepage": "https://github.com/cast0-ai/cast0-openclaw#readme",
   "main": "./dist/index.js",
   "scripts": {
     "build": "tsc",
